@@ -1,35 +1,32 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-int main()
-{
-    // задача Begin2 - визначення кількості повних тон і залишку кілограмів
-    int M, tons, kgRemainder;
-    cout << "Enter mass M (kg): ";
-    cin >> M;
-    tons = M / 1000;
-    kgRemainder = M % 1000;
-    cout << "Tons = " << tons << endl;
-    cout << "Remaining kg = " << kgRemainder << endl;
+int main() {
+    // Integer6
+    int A;
+    cout << "Vvedite dvuznachnoe chislo A: ";
+    cin >> A;
+    int tens = A / 10;
+    int units = A % 10;
+    cout << "Desyatki: " << tens << endl;
+    cout << "Edinitsy: " << units << endl;
 
-    // задача Begin6 - визначення десятків і одиниць двозначного числа
-    int N, tens, units;
-    cout << "Enter two-digit number: ";
-    cin >> N;
-    tens = N / 10;
-    units = N % 10;
-    cout << "Tens digit = " << tens << endl;
-    cout << "Units digit = " << units << endl;
+    // Boolean2
+    int B;
+    cout << "Vvedite tseloe chislo B: ";
+    cin >> B;
+    bool isOdd = (B % 2 != 0);
+    cout << "Chislo B neparnoe: " << (isOdd ? "true" : "false") << endl;
 
-    // задача Begin16 - перестановка цифр десятків і одиниць тризначного числа
-    int K, hundreds, tensDigit, unitsDigit, result;
-    cout << "Enter three-digit number: ";
-    cin >> K;
-    hundreds = K / 100;
-    tensDigit = (K / 10) % 10;
-    unitsDigit = K % 10;
-    result = hundreds * 100 + unitsDigit * 10 + tensDigit;
-    cout << "Result after swapping tens and units = " << result << endl;
+    // Math16
+    double x;
+    cout << "Vvedite x: ";
+    cin >> x;
+    double numerator = pow(log(2*x + cos(37.0)), 3);
+    double denominator = pow(sin(x*x), 3) + sqrt(fabs(1 - 2*cos(x) + cos(2*x)));
+    double y = numerator / denominator;
+    cout << "y = " << y << endl;
 
     return 0;
 }
